@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sky{
+  width: 100%;
+  height: 50%;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg_sky.jpg");
+  background-size: contain;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.earth{
+  width: 100%;
+  height: 50%;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg_earth.jpg");
+  background-size: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+img {
+  position: absolute;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+#frontface{
+   z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.surroundings{
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top:50%;
+  left:0;
+  overflow: visible;
 }
+
+.front2,.back2{
+  transform: translateX(100%);
+}
+
+#double-palm-tree{
+  bottom:80%;
+  left: 0;}
+
+#pawn{
+  left: 30%;
+  bottom: 60%;
+
+}
+#single-palm-tree{
+  bottom: 80%;
+  left: 37%}
+
+#single-palm-tree1{
+  bottom: 0;
+  left: 37%}
+#bush{
+  bottom: 0;
+  left: 110%
+}  
+#rook{
+  top: 0;
+  left: 60%
+}
+
+#rook_upright{
+  top: 0;
+  left: 60%
+
+}
+#r_pawn{
+  left: 30%;
+  top: 30%;
+}
+#knight{
+  bottom: 0;
+  transform: translate(0,40%);
+  right: 20%;
+}
+
+.alice-queen {
+  position: absolute;
+  bottom: 20%;
+  right: 40%;
+  overflow: hidden;
+  width: 50%;
+  max-width: 350px; 
+}
+
+.alice-queen:before {
+   content:" ";
+    display: block;
+    padding-bottom: 87%;
+}
+.alice-queen img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;  
+  z-index: 1;
+  overflow: hidden;
+}
+
