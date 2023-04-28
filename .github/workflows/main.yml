@@ -43,4 +43,4 @@ jobs:
         run: npm install -g surge
         
       - name: Deploy To Surge
-        run: surge ./build alice-in-wonderland.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build alice_in_wonderland.surge.sh --token ${{ secrets.SURGE_TOKEN }}
